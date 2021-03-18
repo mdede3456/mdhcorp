@@ -1,0 +1,30 @@
+{
+    "name": "mdhcorp/printlabel",
+    "description": "Library atau plugins yang dibuat khusus untuk digunakan sebagai cetak label order product, mesti diingat, untuk menggunakan plugin ini anda harus memiliki table complete ecommerce",
+    "type": "library",
+    "require": {
+        "barryvdh/laravel-dompdf": "^0.9.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Printlabel\\" : "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Printlabel\\PrintlabelServiceProvider"
+            ],
+            "aliases": {
+                "Mdhprintlabel": "Printlabel\\Facades\\Mdhprintlabel"
+            }
+        }
+    },
+    "authors": [
+        {
+            "name": "mdede3456",
+            "email": "mdede.hidayatullah@gmail.com"
+        }
+    ]
+}
