@@ -35,32 +35,30 @@ class PrintlabelServiceProvider extends ServiceProvider
         // Config
         $this->publishes([
             __DIR__ . '/../config/printlabel.php' => config_path('printlabel.php')
-        ], 'beranda-config');
+        ], 'printlabel-config');
 
         // Migrations
         $this->publishes([
             __DIR__ . '/../database/migrations/' => database_path('migrations')
-        ], 'beranda-migrations');
+        ], 'printlabel-migrations');
 
         // Controllers
         $this->publishes([
             __DIR__ . '/../src/Http/Controllers' => app_path('Http/Controllers/vendor/printlabel')
-        ], 'beranda-controllers');
+        ], 'printlabel-controllers');
 
         // Views
         $this->publishes([
-            __DIR__ . '/../views' => resource_path('views/vendor/beranda')
-        ], 'beranda-views');
+            __DIR__ . '/../views' => resource_path('views/vendor/printlabel')
+        ], 'printlabel-views');
 
         // Assets
         $this->publishes([
             // CSS
-            __DIR__ . '/../assets/css' => public_path('css/beranda'),
+            __DIR__ . '/../assets/css' => public_path('css/printlabel'),
             // JavaScript
-            __DIR__ . '/../assets/js' => public_path('js/beranda'),
-            // Images
-            __DIR__ . '/../assets/imgs' => storage_path('app/public/' . config('beranda.user_avatar.folder')),
-        ], 'beranda-assets');
+            __DIR__ . '/../assets/js' => public_path('js/printlabel'),
+        ], 'printlabel-assets');
     }
     /**
      * Group the routes and set up configurations to load them.
@@ -82,9 +80,9 @@ class PrintlabelServiceProvider extends ServiceProvider
     private function routesConfigurations()
     {
         return [
-            'prefix' => config('beranda.path'),
-            'namespace' =>  config('beranda.namespace'),
-            'middleware' => ['web', config('beranda.middleware')],
+            'prefix' => config('printlabel.path'),
+            'namespace' =>  config('printlabel.namespace'),
+            'middleware' => ['web', config('printlabel.middleware')],
         ];
     }
 }

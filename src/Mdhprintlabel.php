@@ -1,8 +1,8 @@
 <?php
 
-namespace Beranda;
+namespace Printlabel;
 
-class SangrevBeranda
+class Mdhprintlabel
 {
 
 }

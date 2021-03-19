@@ -11,11 +11,13 @@
 
 
 use Illuminate\Support\Facades\Route;
+use Printlabel\Http\Controllers\PrintlabelController;
 
 /*
 * This is the main app route [MDHPRINTLABEL Messenger]
 */
 
 Route::middleware('auth')->group(function () {
-   
+    Route::get('preview/{id}', [PrintlabelController::class, 'livePreview'])->name('preview.l');
+    Route::post('cetak-label', [PrintlabelController::class, 'printLabel'])->name('print.l');
 });
