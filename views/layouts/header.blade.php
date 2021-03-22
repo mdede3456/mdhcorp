@@ -43,7 +43,41 @@
                         </div>
                     </div>
                     <ul class="sidebar-menu selectgroup selectgroup-pills">
-                        <input type="hidden" name="id" value="11">
+                        <input type="hidden" name="id" value="{{ $data->id }}">
+                        <li class="menu-header">Pilih Label</li>
+                        <li class="dropdown ml-3">
+                            <div class="form-group">
+                                <div class="control-label">Swicth Label</div>
+                                <div class="custom-switches-stacked mt-2">
+                                  <label class="custom-switch">
+                                    <input type="radio" name="template" id="template_1" value="1" class="custom-switch-input" checked>
+                                    <span class="custom-switch-indicator"></span>
+                                    <span class="custom-switch-description">Shipping Label</span>
+                                  </label>
+                                  <label class="custom-switch">
+                                    <input type="radio" name="template" id="template_2" value="2" class="custom-switch-input">
+                                    <span class="custom-switch-indicator"></span>
+                                    <span class="custom-switch-description">Shipping Label v2</span>
+                                  </label>
+                                  <label class="custom-switch">
+                                    <input type="radio" name="template" id="template_3" value="3" class="custom-switch-input">
+                                    <span class="custom-switch-indicator"></span>
+                                    <span class="custom-switch-description">Shipping Label A6</span>
+                                  </label>
+                                  <label class="custom-switch">
+                                    <input type="radio" name="template" id="template_4" value="5" class="custom-switch-input">
+                                    <span class="custom-switch-indicator"></span>
+                                    <span class="custom-switch-description">Invoice</span>
+                                  </label>
+                                  <label class="custom-switch">
+                                    <input type="radio" name="template" id="template_5" value="4" class="custom-switch-input">
+                                    <span class="custom-switch-indicator"></span>
+                                    <span class="custom-switch-description">Shipping Label Invoice</span>
+                                  </label>
+                                  
+                                </div>
+                              </div>
+                        </li>
                         <li class="menu-header">Opsi Pilihan</li>
                         <li class="dropdown ml-3">
                             <label class="custom-switch mt-2">
@@ -148,6 +182,7 @@
             <div class="main-content">
                 <section class="section">
                     <ul class="breadcrumb breadcrumb-style ">
+                        
                         <li class="breadcrumb-item">
                             <h4 class="page-title m-b-0">Printlabel</h4>
                         </li>
