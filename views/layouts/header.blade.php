@@ -43,7 +43,7 @@
                         </div>
                     </div>
                     <ul class="sidebar-menu selectgroup selectgroup-pills">
-                        <input type="hidden" name="id" value="{{ $data->id }}">
+                        <input type="hidden" name="id" value="{{ $order_list }}">
                         <li class="menu-header">Pilih Label</li>
                         <li class="dropdown ml-3">
                             <div class="form-group">
